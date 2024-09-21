@@ -1,0 +1,64 @@
+.book {
+  height: 96rem;
+  padding: inherit;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba($color-primary-dark, 0.85),
+    rgba($color-secondary, 0.5)
+  );
+  padding: 19.2rem;
+  z-index: 1;
+
+  &__container {
+    background-image: url(../img/nat-10.jpg);
+    height: 90%;
+    background-size: cover;
+  }
+
+  &__form_container {
+    height: 100%;
+    max-width: 60%;
+    background-color: $color-white;
+    padding-left: 5.2rem;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+    backdrop-filter: blur(10px);
+  }
+
+  &__form {
+    &__input {
+      width: 70%;
+      padding: 1.4rem 1.2rem;
+      background-color: $color-white;
+      border: 1px solid transparent;
+      border-radius: 0.8rem;
+    }
+
+    &__label {
+      opacity: 0;
+    }
+
+    &__radio-group {
+      display: flex;
+      flex-direction: row;
+      row-gap: 1.2rem;
+    }
+
+    // &__radio-input {
+    // }
+
+    &__radio-label {
+      font-size: $default-font;
+      color: $color-gery-dark;
+      padding-left: 1.2rem;
+      padding-right: 2.4rem;
+    }
+
+    // &__radio-button {
+    // }
+  }
+
+  &__header {
+    padding-top: 9rem;
+    color: $color-secondary;
+  }
+}

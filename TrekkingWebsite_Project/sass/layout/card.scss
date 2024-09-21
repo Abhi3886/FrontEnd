@@ -1,0 +1,58 @@
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 150rem;
+  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.2);
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+    backface-visibility: hidden;
+
+    &-frontside {
+    }
+
+    &-backside {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__container-frontside {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__container-backside {
+    transform: rotateY(0);
+  }
+
+  &__package {
+    &-backside-1 {
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($color-orange, 0.2),
+        rgba($color-orange, 0.9)
+      );
+    }
+
+    &-backside-2 {
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($color-primary, 0.8),
+        rgba($color-primary-dark, 0.5)
+      );
+    }
+
+    &-backside-3 {
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($color-blue, 0.2),
+        rgba($color-blue, 0.9)
+      );
+    }
+  }
+}
