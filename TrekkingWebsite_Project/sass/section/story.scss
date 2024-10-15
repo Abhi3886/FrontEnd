@@ -1,0 +1,84 @@
+.story {
+  height: 120rem;
+  background-color: rgba(241, 241, 189, 0.9);
+
+  &__header {
+    padding-top: 9.6rem;
+    color: $color-primary;
+    text-align: center;
+    transition: all ease 0.3s 0s;
+    letter-spacing: 0.4rem;
+
+    &:hover {
+      transform: skew(21deg, 3deg);
+      text-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__grid-container {
+    height: 74rem;
+    width: 100%;
+    padding: 0 9.6rem;
+  }
+
+  &__grid {
+    padding: inherit;
+  }
+
+  &__content {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0 100%);
+    background-color: $color-white;
+    padding: 6.6rem 0;
+  }
+
+  &__img-box {
+    height: 15rem;
+    width: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    justify-self: center;
+    align-self: center;
+    justify-self: end;
+    position: relative;
+  }
+
+  &__caption {
+    font-size: 2.2rem;
+    color: $color-white;
+    position: absolute;
+    top: 40%;
+    left: 13%;
+    transform: translateY(5.6rem);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.7s ease;
+    backface-visibility: hidden;
+  }
+
+  &__img {
+    width: 120%;
+    aspect-ratio: 1;
+    transform: translate(-1.8rem, -1.8rem), scale(1.25);
+    transition: all 0.7s ease;
+  }
+
+  &__context {
+    padding: 1.6rem 12.4rem 1.6rem 3.2rem;
+    font-size: $default-font;
+    line-height: 1.3;
+  }
+
+  &__content:hover &__caption {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &__content:hover &__img {
+    transform: scale(1);
+    filter: blur(3px);
+    z-index: 1;
+  }
+}

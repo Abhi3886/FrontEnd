@@ -1,0 +1,153 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: $default-font;
+    padding: 1.6rem 3.2rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    /* Only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all ease 0.3s;
+    box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary;
+    color: #fff;
+  }
+
+  //Header section button use only
+  &__header {
+    border-radius: 9.8rem;
+    animation: moveToDown 1s 0.7s ease;
+    animation-fill-mode: backwards;
+    transition: all ease 0.2s;
+    position: relative;
+    background-color: $color-white;
+    color: $color-text;
+
+    &:hover {
+      transform: translateY(-1.2rem);
+      box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      transform: translateY(-0.4rem);
+      box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 9.8rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: $color-white;
+      transition: all 0.4s;
+    }
+
+    &:hover::after {
+      transform: scale(1.2, 1.4);
+      opacity: 0;
+    }
+  }
+
+  &__package {
+    color: $color-white;
+    border-radius: 9.6rem;
+
+    &-1 {
+      background-color: $color-primary;
+
+      &:hover,
+      &:active {
+        transform: translateY(-1.2rem);
+        box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.5);
+        background-color: $color-primary;
+      }
+    }
+
+    &_card-1 {
+      background-color: $color-orange;
+
+      &:hover,
+      &:active {
+        transform: translateY(-1.2rem);
+        box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.5);
+        background-color: $color-orange;
+      }
+    }
+
+    &_card-2 {
+      background-color: $color-primary;
+
+      &:hover,
+      &:active {
+        transform: translateY(-1.2rem);
+        box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.5);
+        background-color: $color-primary;
+      }
+    }
+
+    &_card-3 {
+      background-color: $color-blue;
+
+      &:hover,
+      &:active {
+        transform: translateY(-1.2rem);
+        box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.5);
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  &__book {
+    border-radius: 9.6rem;
+    background-color: $color-primary;
+    color: $color-white;
+    position: relative;
+    overflow: visible;
+
+    &:hover {
+      transform: translateY(-1.2rem);
+      box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.5);
+      background-color: $color-primary;
+
+      // &::after {
+      //   transform: scale(1.2, 1.4);
+      //   opacity: 0;
+      // }
+    }
+
+    &:active {
+      transform: translateY(-0.4rem);
+      box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+      background-color: $color-primary;
+    }
+
+    // &::after {
+    //   content: "";
+    //   display: inline-block;
+    //   height: 100%;
+    //   width: 100%;
+    //   border-radius: 9.8rem;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: -1;
+    //   background-color: $color-primary;
+    //   transition: all 0.4s;
+    // }
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .message {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0074d9;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .chances {
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess My Number</h1>
+    <p>Guess a number between 1 and 20</p>
+    <h2 class="secretNumber">?</h2>
+    <form action="guess.php" method="post">
+      <input type="text" class="guess" id="guess" />
+      <input value="check" class="btn check" id="check" />
+    </form>
+    <p class="message" id="message">Start Guessing...</p>
+    <p class="chances">Chances left: 20</p>
+    <p class="score">Highest Score: 20</p>
+
+    <script src="guessMyNumber.js"></script>
+  </body>
+</html>

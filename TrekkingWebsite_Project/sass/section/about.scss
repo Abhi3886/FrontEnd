@@ -1,0 +1,82 @@
+.about {
+  height: 96rem;
+  background: beige;
+  position: relative;
+  margin-top: -20%;
+  z-index: 100;
+
+  &__conatiner {
+    position: absolute;
+    padding: 5.6rem 0 14.2rem 0;
+    height: 100rem;
+    top: 9.6rem;
+  }
+
+  &__header {
+    color: $color-primary;
+    text-align: center;
+    transition: all ease 0.3s 0s;
+  }
+
+  &__header:hover {
+    transform: skew(21deg, 3deg);
+    text-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__secondary {
+    font-size: 2.4rem;
+    color: $color-text;
+  }
+
+  &__paragraph {
+    padding-left: 12.4rem;
+  }
+
+  &__paragraph p {
+    font-size: $default-font;
+    line-height: 1.4;
+    color: $color-text;
+    padding: 2.4rem 0;
+  }
+
+  &__img-box {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    box-shadow: 0 1.2rem 6rem rgba(0, 0, 0, 0.4);
+    transition: all ease 0.3s 0s;
+    outline-offset: 1.2rem;
+    z-index: 100;
+  }
+
+  &__img-1 {
+    width: 45%;
+    top: -5%;
+  }
+  &__img-2 {
+    width: 45%;
+    top: 10%;
+    left: 35%;
+  }
+  &__img-3 {
+    width: 45%;
+    top: 30%;
+    left: 15%;
+  }
+
+  &__img:hover {
+    outline: 1.1rem solid $color-primary-dark;
+    box-shadow: 0 1.8rem 4rem rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transform: translateY(-0.5rem);
+    border-radius: 1.2rem;
+    z-index: 111;
+  }
+
+  &__img:not(:hovor) {
+    transform: scale(0.85);
+    z-index: 99;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "treking",
+  "version": "1.0.0",
+  "description": "loadinf page for terking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "ABHISHEK",
+  "licensenp": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+<<<<<<< HEAD
+  },
+  "dependencies": {
+    "treking": "file:"
+=======
+>>>>>>> 20ad78c266ce7314bbb16ddff76ff62288da2207
+  }
+}
